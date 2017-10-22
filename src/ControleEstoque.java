@@ -50,7 +50,10 @@ public class ControleEstoque extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
+<<<<<<< HEAD
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+=======
+>>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         jButton1.setText("Gravar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +61,11 @@ public class ControleEstoque extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
+<<<<<<< HEAD
         jButton1.setBounds(310, 340, 130, 50);
+=======
+        jButton1.setBounds(310, 340, 67, 23);
+>>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

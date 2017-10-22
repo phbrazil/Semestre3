@@ -3,7 +3,11 @@ USE LojaBrinquedosDatabase;
 
 CREATE TABLE Usuarios(
   CodigoUser INT NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
   NomeUser Varchar (30) NOT NULL,
+=======
+  NomeUser Varchar (30) NOT NULL,
+>>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
   Username VARCHAR(50) NOT NULL,
   Password VARCHAR(20), 
   PRIMARY KEY (CodigoUser));
@@ -15,7 +19,11 @@ INSERT INTO Usuarios(NomeUser, username,Password) VALUES ("Andre Pereira","Andre
 INSERT INTO Usuarios(NomeUser, username,Password) VALUES ("Pedro Paulo Olivira","Pedro.Oliveira","Mortadela1");
 INSERT INTO Usuarios(NomeUser, username,Password) VALUES ("Matheus Diamantino","Matheus.Diamantino","Mortadela1");
 INSERT INTO Usuarios(NomeUser, username,Password) VALUES ("Guilherme Feitosa","Guilherme.Feitosa","Mortadela1");
+<<<<<<< HEAD
 INSERT INTO Usuarios(NomeUser, username,Password) VALUES ("Gabriel","Gabiru","Mortadela1");
+=======
+INSERT INTO Usuarios(NomeUser, username,Password) VALUES ("Gabriel","Gabiru","Mortadela1");
+>>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
 
 CREATE TABLE Clientes(
@@ -62,9 +70,15 @@ FaixaEtaria VARCHAR(20) NOT NULL,
 Fabricante VARCHAR(50),  
 PrazoGarantia VARCHAR(30),
 Quantidade INT NOT NULL,
+<<<<<<< HEAD
 PRIMARY KEY (idproduto));
 
 
+=======
+PRIMARY KEY (idproduto));
+
+
+>>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 INSERT INTO Produtos (codigobarras, Nomeproduto, Valor, FaixaEtaria, Fabricante, PrazoGarantia, Quantidade) VALUES ('1,'Telefone Feliz',59.99,'0 à 12 meses','Mattel','3 meses',1);
 INSERT INTO Produtos (codigobarras, Nomeproduto, Valor, FaixaEtaria, Fabricante, PrazoGarantia, Quantidade) VALUES ('2,'Mordedor Macaco Brincalhão',29.99,'0 à 12 meses','Mattel','3 meses',1);
 INSERT INTO Produtos (codigobarras, Nomeproduto, Valor, FaixaEtaria, Fabricante, PrazoGarantia, Quantidade) VALUES ('3,'Robôzinho BeatBo',399.99,'0 à 12 meses','Mattel','3 meses',1);
