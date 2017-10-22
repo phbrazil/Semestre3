@@ -113,11 +113,6 @@ public class Login extends javax.swing.JFrame {
         SelectBancoMySQL banco = new SelectBancoMySQL();
 
         boolean validacesso = banco.ValidaAcesso(JUsername.getText(), jPasswordField1.getText());
-<<<<<<< HEAD
-=======
-
-        /*
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         
         if (validacesso == true) {
             MenuInicial telaInicial = new MenuInicial();
@@ -127,19 +122,6 @@ public class Login extends javax.swing.JFrame {
             jPasswordField1.setText("");
 
         }
-<<<<<<< HEAD
-=======
-        
-        */
-        
-        MenuInicial telaInicial = new MenuInicial();
-            telaInicial.setSize(800, 800);
-            telaInicial.setVisible(true);
-            JUsername.setText("");
-            jPasswordField1.setText("");
-        
-        
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -50,23 +50,16 @@ public class Vendas extends javax.swing.JFrame {
         JNomeClienteVenda = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         JIDProduto = new javax.swing.JTextField();
-<<<<<<< HEAD
-=======
-        JCPFClienteVenda = new javax.swing.JTextField();
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         JBPesquisarCPF = new javax.swing.JButton();
         JVendaFabricante = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jSpinnerQuantidade = new javax.swing.JSpinner();
         jLabel11 = new javax.swing.JLabel();
-<<<<<<< HEAD
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableProdutos = new javax.swing.JTable();
         JButtonExcluir = new javax.swing.JToggleButton();
         jFormattedCPFVenda = new javax.swing.JFormattedTextField();
-=======
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -121,11 +114,7 @@ public class Vendas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBPesquisarProduto);
-<<<<<<< HEAD
         JBPesquisarProduto.setBounds(40, 170, 140, 29);
-=======
-        JBPesquisarProduto.setBounds(40, 170, 140, 23);
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         getContentPane().add(JFaixaEtaria);
         JFaixaEtaria.setBounds(210, 240, 230, 30);
 
@@ -160,11 +149,6 @@ public class Vendas extends javax.swing.JFrame {
         jLabel8.setBounds(410, 40, 110, 20);
         getContentPane().add(JIDProduto);
         JIDProduto.setBounds(40, 140, 140, 30);
-<<<<<<< HEAD
-=======
-        getContentPane().add(JCPFClienteVenda);
-        JCPFClienteVenda.setBounds(40, 60, 320, 30);
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
         JBPesquisarCPF.setText("Pesquisar CPF");
         JBPesquisarCPF.addActionListener(new java.awt.event.ActionListener() {
@@ -173,11 +157,7 @@ public class Vendas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBPesquisarCPF);
-<<<<<<< HEAD
         JBPesquisarCPF.setBounds(40, 90, 140, 29);
-=======
-        JBPesquisarCPF.setBounds(40, 90, 140, 23);
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         getContentPane().add(JVendaFabricante);
         JVendaFabricante.setBounds(40, 240, 150, 30);
 
@@ -199,7 +179,6 @@ public class Vendas extends javax.swing.JFrame {
         getContentPane().add(jLabel11);
         jLabel11.setBounds(710, 110, 70, 20);
 
-<<<<<<< HEAD
         jTableProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -233,8 +212,6 @@ public class Vendas extends javax.swing.JFrame {
         getContentPane().add(jFormattedCPFVenda);
         jFormattedCPFVenda.setBounds(40, 60, 270, 26);
 
-=======
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -268,19 +245,12 @@ public class Vendas extends javax.swing.JFrame {
         SelectBancoMySQL pesquisarcliente = new SelectBancoMySQL();
 
         boolean cpfdigitado = false;
-<<<<<<< HEAD
                         System.out.println(jFormattedCPFVenda.getText());
 
 
         do {
             try {
                 pesquisarcliente.SelectCPFCliente(String.valueOf(jFormattedCPFVenda.getText()));
-=======
-
-        do {
-            try {
-                pesquisarcliente.SelectCPFCliente(Long.valueOf(JCPFClienteVenda.getText()));
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
                 cpfdigitado = true;
             } catch (NumberFormatException erro) {
                 JOptionPane.showMessageDialog(null, "Digite um CPF");
@@ -301,21 +271,13 @@ public class Vendas extends javax.swing.JFrame {
                 cadastroclientes.setSize(800, 800);
                 cadastroclientes.setVisible(true);
 
-<<<<<<< HEAD
                 jFormattedCPFVenda.setText("");
-=======
-                JCPFClienteVenda.setText("");
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
             } else {
 
                 JOptionPane.showMessageDialog(null, "Insira um CPF cadastrado");
 
-<<<<<<< HEAD
                 jFormattedCPFVenda.setText("");
-=======
-                JCPFClienteVenda.setText("");
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
             }
 
@@ -337,7 +299,6 @@ public class Vendas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JButtonAdicionarCarrinhoActionPerformed
 
-<<<<<<< HEAD
     private void JButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonExcluirActionPerformed
 
         
@@ -383,8 +344,6 @@ public class Vendas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JButtonExcluirActionPerformed
 
-=======
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
     /**
      * @param args the command line arguments
      */
@@ -423,11 +382,7 @@ public class Vendas extends javax.swing.JFrame {
     private javax.swing.JButton JBPesquisarCPF;
     private javax.swing.JButton JBPesquisarProduto;
     private javax.swing.JButton JButtonAdicionarCarrinho;
-<<<<<<< HEAD
     private javax.swing.JToggleButton JButtonExcluir;
-=======
-    private javax.swing.JTextField JCPFClienteVenda;
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
     private javax.swing.JButton JCancelarCompra;
     private javax.swing.JTextField JFaixaEtaria;
     private javax.swing.JButton JFinalizarCompra;
@@ -438,10 +393,7 @@ public class Vendas extends javax.swing.JFrame {
     private javax.swing.JTextField JPreco;
     private javax.swing.JTextField JValorTotal;
     private javax.swing.JTextField JVendaFabricante;
-<<<<<<< HEAD
     private javax.swing.JFormattedTextField jFormattedCPFVenda;
-=======
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -453,12 +405,8 @@ public class Vendas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-<<<<<<< HEAD
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerQuantidade;
     private javax.swing.JTable jTableProdutos;
-=======
-    private javax.swing.JSpinner jSpinnerQuantidade;
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
     // End of variables declaration//GEN-END:variables
 }

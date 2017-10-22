@@ -36,10 +36,6 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         JClienteRG = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-<<<<<<< HEAD
-=======
-        JClienteCPF = new javax.swing.JTextField();
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         JClienteLogradouro = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         JClienteBairro = new javax.swing.JTextField();
@@ -62,10 +58,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         ComboEstadoCivil = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
         jFormattedNascimento = new javax.swing.JFormattedTextField();
-<<<<<<< HEAD
         jFormattedCPF = new javax.swing.JFormattedTextField();
-=======
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -83,11 +76,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-<<<<<<< HEAD
         jButton1.setBounds(340, 430, 84, 29);
-=======
-        jButton1.setBounds(340, 430, 67, 23);
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
         JClienteNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,17 +108,6 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabel4.setText("CPF");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(50, 60, 58, 26);
-<<<<<<< HEAD
-=======
-
-        JClienteCPF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JClienteCPFActionPerformed(evt);
-            }
-        });
-        getContentPane().add(JClienteCPF);
-        JClienteCPF.setBounds(50, 90, 160, 30);
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         getContentPane().add(JClienteLogradouro);
         JClienteLogradouro.setBounds(50, 170, 250, 30);
 
@@ -213,17 +191,12 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabel15.setBounds(240, 280, 100, 30);
 
         try {
-<<<<<<< HEAD
             jFormattedNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####-##-##")));
-=======
-            jFormattedNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         jFormattedNascimento.setText("  /  /    ");
         getContentPane().add(jFormattedNascimento);
-<<<<<<< HEAD
         jFormattedNascimento.setBounds(240, 310, 80, 30);
 
         try {
@@ -233,20 +206,10 @@ public class CadastroClientes extends javax.swing.JFrame {
         }
         getContentPane().add(jFormattedCPF);
         jFormattedCPF.setBounds(50, 90, 200, 30);
-=======
-        jFormattedNascimento.setBounds(240, 310, 60, 30);
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
-=======
-    private void JClienteCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JClienteCPFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JClienteCPFActionPerformed
-
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
     private void JClienteRGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JClienteRGActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JClienteRGActionPerformed
@@ -257,48 +220,31 @@ public class CadastroClientes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-<<<<<<< HEAD
         //FALTA O CPF
         InsertBancoMySQL insertcliente = new InsertBancoMySQL();
         SelectBancoMySQL selectnovocliente = new SelectBancoMySQL();
 
-=======
-       InsertBancoMySQL insertcliente = new InsertBancoMySQL();
-       SelectBancoMySQL selectnovocliente = new SelectBancoMySQL();
-        
-        
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         ValidaCPF validacpf = new ValidaCPF();
 
         boolean tudook = false;
         String nome = "", logradouro = "", RG = "", bairro = "", cidade = "",
                 estado = "", UF = "", telefone = "", celular = "", email = "", sexo = "", estadocivil = "", nascimento = "";
 
-<<<<<<< HEAD
         String CPFsemPontos = "";
         String CPFsemTraco = "";
 
         long CPF = 0;
 
-=======
-        long CPF = 0;
-        
-        
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
         do {
             try {
                 nome = String.valueOf(JClienteNome.getText());
                 logradouro = String.valueOf(JClienteLogradouro.getText());
                 RG = String.valueOf(JClienteRG.getText());
-<<<<<<< HEAD
                 CPFsemPontos = String.valueOf(jFormattedCPF.getText());
                 CPFsemTraco = String.valueOf(CPFsemPontos.replace(".", ""));
                 CPF = Long.valueOf(CPFsemTraco.replace("-", ""));
                 System.out.println("aeeeeeeee"+CPF);
 
-=======
-                CPF = Long.valueOf(JClienteCPF.getText());
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
                 bairro = String.valueOf(JClienteBairro.getText());
                 cidade = String.valueOf(JClienteCidade.getText());
                 estado = String.valueOf(JClienteEstado.getText());
@@ -310,10 +256,6 @@ public class CadastroClientes extends javax.swing.JFrame {
                 estadocivil = String.valueOf(ComboEstadoCivil.getSelectedItem());
                 nascimento = String.valueOf(jFormattedNascimento.getText());
 
-<<<<<<< HEAD
-=======
-                //insertcliente.CPFCadastradoSelect(CPF);
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
                 tudook = true;
 
             } catch (NumberFormatException erro) {
@@ -321,11 +263,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         } while (tudook == false);
 
-<<<<<<< HEAD
         if (jFormattedCPF.getText().equals("") || jFormattedCPF.getText().length() < 14 || jFormattedCPF.getText().length() > 14) {
-=======
-        if (JClienteCPF.getText().equals("")||JClienteCPF.getText().length()<11 || JClienteCPF.getText().length()>11) {
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
             JOptionPane.showMessageDialog(null, "Verifique os campos");
 
         } else if (validacpf.CPFValido(CPF) == false) {
@@ -336,30 +274,18 @@ public class CadastroClientes extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "O CPF " + CPF + " já se encontra na base");
 
         } else {
-<<<<<<< HEAD
             insertcliente.InsertNovoCliente(nome, logradouro, RG, String.valueOf(CPFsemPontos), bairro, cidade, estado, UF, telefone, celular, email, sexo, estadocivil, nascimento);
 
             JClienteNome.setText("");
             JClienteBairro.setText("");
             jFormattedCPF.setText("");
-=======
-            insertcliente.InsertNovoCliente(nome, logradouro, RG, String.valueOf(CPF), bairro, cidade, estado, UF, telefone, celular, email, sexo, estadocivil, nascimento);
-
-            JClienteNome.setText("");
-            JClienteBairro.setText("");
-            JClienteCPF.setText("");
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
             JClienteRG.setText("");
             JClienteLogradouro.setText("");
             JClienteTelefone.setText("");
             JClienteCelular.setText("");
             JClienteEstado.setText("");
             JClienteCidade.setText("");
-<<<<<<< HEAD
             jFormattedNascimento.setText("");
-=======
-            jFormattedNascimento.setText("  /  /    ");
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
             JClienteEmail.setText("");
         }
 
@@ -408,10 +334,6 @@ public class CadastroClientes extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> ComboSexo;
     public javax.swing.JComboBox<String> ComboUF;
     public javax.swing.JTextField JClienteBairro;
-<<<<<<< HEAD
-=======
-    public javax.swing.JTextField JClienteCPF;
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
     public javax.swing.JTextField JClienteCelular;
     public javax.swing.JTextField JClienteCidade;
     public javax.swing.JTextField JClienteEmail;
@@ -421,10 +343,7 @@ public class CadastroClientes extends javax.swing.JFrame {
     public javax.swing.JTextField JClienteRG;
     public javax.swing.JTextField JClienteTelefone;
     private javax.swing.JButton jButton1;
-<<<<<<< HEAD
     private javax.swing.JFormattedTextField jFormattedCPF;
-=======
->>>>>>> c4e8560d32a0055c2043deb590cc22684cd2c8f0
     private javax.swing.JFormattedTextField jFormattedNascimento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
