@@ -68,6 +68,8 @@ public class Vendas extends javax.swing.JFrame {
         jTableProdutos = new javax.swing.JTable();
         JButtonExcluir = new javax.swing.JToggleButton();
         jFormattedCPFVenda = new javax.swing.JFormattedTextField();
+        jFormattedValorDesconto = new javax.swing.JFormattedTextField();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -84,7 +86,7 @@ public class Vendas extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(210, 120, 120, 20);
         getContentPane().add(JPreco);
-        JPreco.setBounds(520, 140, 140, 30);
+        JPreco.setBounds(520, 140, 90, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Preço");
@@ -180,12 +182,12 @@ public class Vendas extends javax.swing.JFrame {
         getContentPane().add(jLabel10);
         jLabel10.setBounds(270, 10, 220, 30);
         getContentPane().add(jSpinnerQuantidade);
-        jSpinnerQuantidade.setBounds(670, 140, 60, 30);
+        jSpinnerQuantidade.setBounds(750, 140, 60, 30);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("Quantidade");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(710, 110, 70, 20);
+        jLabel11.setBounds(750, 120, 70, 20);
 
         jTableProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -226,6 +228,13 @@ public class Vendas extends javax.swing.JFrame {
         }
         getContentPane().add(jFormattedCPFVenda);
         jFormattedCPFVenda.setBounds(40, 60, 280, 30);
+        getContentPane().add(jFormattedValorDesconto);
+        jFormattedValorDesconto.setBounds(620, 140, 120, 30);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel12.setText("Preço com Desconto");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(620, 120, 120, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -251,6 +260,7 @@ public class Vendas extends javax.swing.JFrame {
         JPreco.setText(String.valueOf("R$" + selectproduto.GetValorProduto()));
         JGarantia.setText(String.valueOf(selectproduto.GetGarantia()));
         JVendaFabricante.setText(String.valueOf(selectproduto.GetFabricante()));
+        jFormattedValorDesconto.setText(String.valueOf(selectproduto.GetValorDesconto()));
 
         // TODO add your handling code here:
     }//GEN-LAST:event_JBPesquisarProdutoActionPerformed
@@ -442,9 +452,11 @@ public class Vendas extends javax.swing.JFrame {
     private javax.swing.JTextField JValorTotal;
     private javax.swing.JTextField JVendaFabricante;
     private javax.swing.JFormattedTextField jFormattedCPFVenda;
+    private javax.swing.JFormattedTextField jFormattedValorDesconto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

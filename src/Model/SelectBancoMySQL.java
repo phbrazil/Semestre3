@@ -26,7 +26,7 @@ public class SelectBancoMySQL {
 
     private String nomeproduto = "", faixaetaria = "", fabricante = "", prazogarantia = "", nomeCliente = "";
 
-    private double valor = 0;
+    private double valor = 0, valordesconto = 0;
 
     private Connection conexao = null;
 
@@ -164,6 +164,7 @@ public class SelectBancoMySQL {
                 fabricante = result.getString("fabricante");
                 prazogarantia = result.getString("prazogarantia");
                 valor = result.getDouble("valor");
+                valordesconto = result.getDouble("valordesconto");
 
             }
 
@@ -265,6 +266,11 @@ public class SelectBancoMySQL {
     public String GetFabricante() {
 
         return fabricante;
+    }
+    
+    public double GetValorDesconto() {
+
+        return valordesconto;
     }
 
 }
