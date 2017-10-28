@@ -6,6 +6,8 @@
 package View;
 
 import Model.RelatoriosBanco;
+import Service.RelatorioClientes;
+import java.security.Provider;
 
 /**
  *
@@ -35,6 +37,8 @@ public class RelatoriosTela extends javax.swing.JFrame {
         jComboRelatorios = new javax.swing.JComboBox<>();
         jComboReportIntervalo = new javax.swing.JComboBox<>();
         BotaoGerarRelatorio = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableClientes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -45,7 +49,7 @@ public class RelatoriosTela extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(200, 10, 190, 40);
         getContentPane().add(JResultadoReport);
-        JResultadoReport.setBounds(110, 220, 340, 150);
+        JResultadoReport.setBounds(110, 220, 330, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Resultado");
@@ -67,7 +71,23 @@ public class RelatoriosTela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BotaoGerarRelatorio);
-        BotaoGerarRelatorio.setBounds(280, 150, 59, 23);
+        BotaoGerarRelatorio.setBounds(280, 150, 61, 23);
+
+        jTableClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Codigo de Barras", "Nome do Produto", "Valor", "Valor Desconto", "Faixa Etária", "Fabricante", "Garantia", "Quantidade"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableClientes);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(110, 220, 490, 310);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -75,6 +95,8 @@ public class RelatoriosTela extends javax.swing.JFrame {
     private void BotaoGerarRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoGerarRelatorioActionPerformed
 
         RelatoriosBanco relatoriosbbanco = new RelatoriosBanco();
+
+        Service.RelatorioClientes relatoriocliente = new RelatorioClientes();
 
         if (jComboRelatorios.getSelectedItem().equals("Total de Clientes")) {
             int quantidadeclientes = relatoriosbbanco.SelectQuantidadeClientes();
@@ -86,10 +108,10 @@ public class RelatoriosTela extends javax.swing.JFrame {
 
         }
 
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+
         //int quantidadevendas = relatoriosbbanco.SelectQuantidadeVendas();
-
         //JResultadoReport.setText(String.valueOf("A quantidade de vendas foi: " + quantidadevendas));
-
         // TODO add your handling code here:
     }//GEN-LAST:event_BotaoGerarRelatorioActionPerformed
 
@@ -135,5 +157,7 @@ public class RelatoriosTela extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboReportIntervalo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableClientes;
     // End of variables declaration//GEN-END:variables
 }

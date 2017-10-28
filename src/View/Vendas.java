@@ -332,7 +332,7 @@ public class Vendas extends javax.swing.JFrame {
         if (linha <= 9) {
             selectproduto.SelectProduto(Integer.valueOf(JIDProduto.getText()));
 
-            jTableProdutos.setValueAt(JIDProduto.getText(), linha, coluna);
+            jTableProdutos.setValueAt(JIDProduto.getText(), 0, 0);
             coluna++;
             jTableProdutos.setValueAt(JNomeProduto.getText(), linha, coluna);
             coluna++;

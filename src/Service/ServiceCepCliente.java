@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  * @author paulo.hbezerra
  */
 public class ServiceCepCliente {
-    
+
     private String usuario = "root";
 
     private String senha = "adminadmin";
@@ -29,7 +29,7 @@ public class ServiceCepCliente {
     private Connection conexao = null;
 
     private String logradouro, cidade, UF, numero, estado;
-    
+
     public void SelectCEP(String CEP) {
 
         String select = "";
@@ -40,9 +40,9 @@ public class ServiceCepCliente {
             conexao = DriverManager.getConnection(url, usuario, senha);
 
             java.sql.Statement st = conexao.createStatement();
-            select = "select * from CEPS where cep = '" + CEP+"'";
+            select = "select * from CEPS where cep = '" + CEP + "'";
             ResultSet result = st.executeQuery(select);
-            
+
             while (result.next()) {
 
                 logradouro = result.getString("logradouro");
@@ -61,25 +61,29 @@ public class ServiceCepCliente {
         }
         if (logradouro == null) {
             JOptionPane.showMessageDialog(null, "CEP não encontrado");
-            
+
         }
 
     }
 
-    public Object GetLogradouro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String GetLogradouro() {
+
+        return logradouro;
     }
 
-    public Object GetEstado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String GetCidade() {
+
+        return cidade;
     }
 
-    public Object GetCidade() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String GetUF() {
+
+        return UF;
     }
 
-    public Object GetUF() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String GetEstado() {
+
+        return estado;
     }
-    
+
 }

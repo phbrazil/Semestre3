@@ -1,6 +1,5 @@
 package Model;
 
-
 import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -181,29 +180,6 @@ public class SelectBancoMySQL {
 
     }
 
-    
-
-    public String GetLogradouro() {
-
-        return logradouro;
-    }
-
-    
-    public String GetCidade() {
-
-        return cidade;
-    }
-
-    public String GetUF() {
-
-        return UF;
-    }
-    
-     public String GetEstado() {
-
-        return estado;
-    }
-
     public String GetnomeProduto() {
 
         return nomeproduto;
@@ -233,7 +209,7 @@ public class SelectBancoMySQL {
 
         return fabricante;
     }
-    
+
     public double GetValorDesconto() {
 
         return valordesconto;

@@ -17,7 +17,7 @@ public class RelatoriosBanco {
 
     private String usuario = "root";
 
-    private String senha = "admin";
+    private String senha = "adminadmin";
 
     private String url = "jdbc:mysql://localhost:3306/LojaBrinquedosDatabase";
 
