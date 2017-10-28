@@ -91,4 +91,43 @@ public class RelatorioClientes {
 
     }
 
+    public String GetcodigoBarras() {
+
+        return codigobarras;
+    }
+
+    public String GetNomeProduto() {
+
+        return nomeproduto;
+    }
+
+    public double GetValor() {
+
+        return valor;
+    }
+
+    public double GetValorDesconto() {
+
+        return valordesconto;
+    }
+
+    public String GetFaixaEtaria() {
+
+        return faixaetaria;
+    }
+
+    public String GetFabricante() {
+
+        return fabricante;
+    }
+
+    public String GetPrazoGarantia() {
+
+        return prazogarantia;
+    }
+
+    public int Getquantidade() {
+
+        return quantidade;
+    }
 }

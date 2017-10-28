@@ -109,7 +109,16 @@ public class RelatoriosTela extends javax.swing.JFrame {
         }
 
         jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        jTableClientes.setValueAt(relatoriocliente, relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
 
+        
+        
         //int quantidadevendas = relatoriosbbanco.SelectQuantidadeVendas();
         //JResultadoReport.setText(String.valueOf("A quantidade de vendas foi: " + quantidadevendas));
         // TODO add your handling code here:

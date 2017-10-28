@@ -100,7 +100,7 @@ public class Vendas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JButtonAdicionarCarrinho);
-        JButtonAdicionarCarrinho.setBounds(30, 290, 210, 40);
+        JButtonAdicionarCarrinho.setBounds(30, 280, 210, 40);
 
         JFinalizarCompra.setText("Finalizar Venda");
         getContentPane().add(JFinalizarCompra);
