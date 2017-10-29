@@ -18,18 +18,21 @@ public class RelatorioClientes {
 
     private String usuario = "root";
 
-    private String senha = "adminadmin";
+    private String senha = "admin";
 
     private String url = "jdbc:mysql://localhost:3306/LojaBrinquedosDatabase";
 
     private Connection conexao = null;
 
-    private String codigobarras = "", nomeproduto = "", faixaetaria = "", fabricante = "", prazogarantia = "";
-    int quantidade = 0;
+    private String nomeproduto = "", faixaetaria = "", fabricante = "", prazogarantia = "";
+    private int quantidade = 0;
+    private int codigobarras = 0;
     private double valor = 0, valordesconto = 0;
 
-    int linha = 0;
-    int coluna = 0;
+    private int linha = 0;
+    private int coluna = 0;
+
+    private int quantidadeprodutos = 0;
 
     public void SelectProduto() {
 
@@ -41,28 +44,28 @@ public class RelatorioClientes {
             conexao = DriverManager.getConnection(url, usuario, senha);
 
             java.sql.Statement st = conexao.createStatement();
-            select = "select * from produtos";
+            select = "select * from produtos limit 1";
             ResultSet result = st.executeQuery(select);
 
             while (result.next()) {
 
-                codigobarras = result.getString("codigobarras");
-                coluna++;
+                codigobarras = result.getInt("codigobarras");
+                // coluna++;
                 nomeproduto = result.getString("nomeproduto");
-                coluna++;
+                //  coluna++;
                 valor = result.getInt("valor");
-                coluna++;
+                //  coluna++;
                 valordesconto = result.getInt("valordesconto");
-                coluna++;
+                //  coluna++;
                 faixaetaria = result.getString("faixaetaria");
-                coluna++;
+                //coluna++;
                 fabricante = result.getString("fabricante");
-                coluna++;
+                // coluna++;
                 prazogarantia = result.getString("prazogarantia");
-                coluna++;
+                //  coluna++;
                 quantidade = result.getInt("quantidade");
-                coluna++;
-                linha++;
+                //  coluna++;
+                //   linha++;
 
             }
 
@@ -79,6 +82,39 @@ public class RelatorioClientes {
 
     }
 
+    public int SelectQuantosProdutos() {
+
+        String select = "";
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+
+            conexao = DriverManager.getConnection(url, usuario, senha);
+
+            java.sql.Statement st = conexao.createStatement();
+            select = "select count(*) as quantidadeprodutos from produtos";
+            ResultSet result = st.executeQuery(select);
+
+            while (result.next()) {
+
+                quantidadeprodutos = result.getInt("quantidadeprodutos");
+
+            }
+
+            conexao.close();
+
+        } catch (Exception e) {
+
+            System.out.println("erro" + e.getMessage());
+
+        }
+        if (nomeproduto.equals("")) {
+            JOptionPane.showMessageDialog(null, "Produto não encontrado");
+        }
+        return quantidadeprodutos;
+
+    }
+
     public int Getlinha() {
 
         return linha;
@@ -91,7 +127,7 @@ public class RelatorioClientes {
 
     }
 
-    public String GetcodigoBarras() {
+    public long GetcodigoBarras() {
 
         return codigobarras;
     }

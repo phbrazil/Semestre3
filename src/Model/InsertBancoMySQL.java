@@ -34,7 +34,7 @@ public class InsertBancoMySQL {
 
     private String usuario = "root";
 
-    private String senha = "adminadmin";
+    private String senha = "admin";
 
     private String url = "jdbc:mysql://localhost:3306/LojaBrinquedosDatabase";
 
