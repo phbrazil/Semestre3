@@ -89,14 +89,16 @@ public class RelatoriosTela extends javax.swing.JFrame {
 
     private void BotaoGerarRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoGerarRelatorioActionPerformed
 
-        //RelatoriosBanco relatoriosbbanco = new RelatoriosBanco();
-        
-        
+        int linha = 0, coluna = 0;
+        int contador = 0;
+
+//RelatoriosBanco relatoriosbbanco = new RelatoriosBanco();
         Service.RelatorioClientes relatoriocliente = new RelatorioClientes();
 
         relatoriocliente.SelectProduto();
 
-
+        int quantidade = relatoriocliente.SelectQuantosProdutos();
+               
         /*if (jComboRelatorios.getSelectedItem().equals("Total de Clientes")) {
             int quantidadeclientes = relatoriosbbanco.SelectQuantidadeClientes();
             JResultadoReport.setText(String.valueOf("A quantidade total de clientes é: " + quantidadeclientes));
@@ -107,18 +109,29 @@ public class RelatoriosTela extends javax.swing.JFrame {
 
         }
          */
-        jTableClientes.setValueAt(relatoriocliente.GetcodigoBarras(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
-        jTableClientes.setValueAt(relatoriocliente.GetNomeProduto(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
-        jTableClientes.setValueAt(relatoriocliente.GetValor(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
-        jTableClientes.setValueAt(relatoriocliente.GetValorDesconto(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
-        jTableClientes.setValueAt(relatoriocliente.GetFaixaEtaria(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
-        jTableClientes.setValueAt(relatoriocliente.GetFabricante(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
-        jTableClientes.setValueAt(relatoriocliente.GetPrazoGarantia(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
-        jTableClientes.setValueAt(relatoriocliente.Getquantidade(), relatoriocliente.Getlinha(), relatoriocliente.Getcoluna());
+        
+        do{
+        jTableClientes.setValueAt(relatoriocliente.GetcodigoBarras(), linha, coluna);
+        coluna++;
+        jTableClientes.setValueAt(relatoriocliente.GetNomeProduto(), linha, coluna);
+        coluna++;
+        jTableClientes.setValueAt(relatoriocliente.GetValor(), linha, coluna);
+        coluna++;
+        jTableClientes.setValueAt(relatoriocliente.GetValorDesconto(), linha, coluna);
+        coluna++;
+        jTableClientes.setValueAt(relatoriocliente.GetFaixaEtaria(), linha, coluna);
+        coluna++;
+        jTableClientes.setValueAt(relatoriocliente.GetFabricante(), linha, coluna);
+        coluna++;
+        jTableClientes.setValueAt(relatoriocliente.GetPrazoGarantia(), linha, coluna);
+        coluna++;
+        jTableClientes.setValueAt(relatoriocliente.Getquantidade(), linha, coluna);
+        linha = 0;
+        coluna = 0;
+        contador++;
+        
 
-        
-        
-        
+        }while(contador < quantidade);
         //int quantidadevendas = relatoriosbbanco.SelectQuantidadeVendas();
         //JResultadoReport.setText(String.valueOf("A quantidade de vendas foi: " + quantidadevendas));
         // TODO add your handling code here:

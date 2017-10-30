@@ -29,8 +29,6 @@ public class RelatorioClientes {
     private int codigobarras = 0;
     private double valor = 0, valordesconto = 0;
 
-    private int linha = 0;
-    private int coluna = 0;
 
     private int quantidadeprodutos = 0;
 
@@ -44,28 +42,19 @@ public class RelatorioClientes {
             conexao = DriverManager.getConnection(url, usuario, senha);
 
             java.sql.Statement st = conexao.createStatement();
-            select = "select * from produtos limit 1";
+            select = "select * from produtos";
             ResultSet result = st.executeQuery(select);
 
             while (result.next()) {
 
                 codigobarras = result.getInt("codigobarras");
-                // coluna++;
                 nomeproduto = result.getString("nomeproduto");
-                //  coluna++;
                 valor = result.getInt("valor");
-                //  coluna++;
                 valordesconto = result.getInt("valordesconto");
-                //  coluna++;
                 faixaetaria = result.getString("faixaetaria");
-                //coluna++;
                 fabricante = result.getString("fabricante");
-                // coluna++;
                 prazogarantia = result.getString("prazogarantia");
-                //  coluna++;
                 quantidade = result.getInt("quantidade");
-                //  coluna++;
-                //   linha++;
 
             }
 
@@ -112,18 +101,6 @@ public class RelatorioClientes {
             JOptionPane.showMessageDialog(null, "Produto não encontrado");
         }
         return quantidadeprodutos;
-
-    }
-
-    public int Getlinha() {
-
-        return linha;
-
-    }
-
-    public int Getcoluna() {
-
-        return coluna;
 
     }
 
